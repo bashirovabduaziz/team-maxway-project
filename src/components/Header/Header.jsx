@@ -1,161 +1,162 @@
-import { Fragment } from 'react'
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  Transition,
-} from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import React, { useEffect, useState } from "react";
+import logo from "../../../public/images/logo.webp";
+import { NavLink } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import uz from "../../../public/images/uz.svg";
+import ru from "../../../public/images/ru.svg";
+import en from "../../../public/images/en.svg";
+import { MdCheck } from "react-icons/md";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import PersonIcon from "@mui/icons-material/Person";
+import "./header.css";
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
+export default function Header({ setShowLogin }) {
+  const [selectedLanguage, setSelectedLanguage] = useState(uz);
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      if (!event.target.closest("#dropdownButton")) {
+        dropdownMenu.classList.add("hidden");
+      }
+    };
 
-export default function Header() {
+    document.addEventListener("click", handleDocumentClick);
+
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
+
+  const handleShowLogin = (e) => {
+    setShowLogin(true);
+    e.preventDefault();
+  };
+
+  const handleDropdownClick = (event) => {
+    event.stopPropagation();
+    document.getElementById("dropdownMenu").classList.toggle("hidden");
+  };
+
+  const handleLanguageChange = (language, imageSrc) => (event) => {
+    event.preventDefault();
+    setSelectedLanguage(imageSrc);
+    document.getElementById("dropdownMenu").classList.add("hidden");
+  };
+
   return (
-    <Disclosure as="nav" className="bg-gray-800">
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </DisclosureButton>
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+    <div>
+      <nav className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between py-2">
+        <div className="left__nav flex items-center gap-12">
+          <NavLink to="/">
+            <img src={logo} alt="Logo" />
+          </NavLink>
 
-                {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </MenuButton>
-                  </div>
-                  <Transition
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <MenuItem>
-                        {({ focus }) => (
-                          <a
-                            href="#"
-                            className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </MenuItem>
-                      <MenuItem>
-                        {({ focus }) => (
-                          <a
-                            href="#"
-                            className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </MenuItem>
-                      <MenuItem>
-                        {({ focus }) => (
-                          <a
-                            href="#"
-                            className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </MenuItem>
-                    </MenuItems>
-                  </Transition>
-                </Menu>
-              </div>
+          <ul className="flex space-x-8">
+            <NavLink to="/" className="text-gray-700 hover:text-gray-900">
+              Menyu
+            </NavLink>
+            <NavLink
+              to="/branches"
+              className="text-gray-700 hover:text-gray-900"
+            >
+              Filiallar
+            </NavLink>
+            <NavLink to="/about" className="text-gray-700 hover:text-gray-900">
+              Biz haqimizda
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="text-gray-700 hover:text-gray-900"
+            >
+              Bog'lanish
+            </NavLink>
+          </ul>
+        </div>
+
+        <div className="right__nav flex items-center space-x-6">
+          <div className="flex items-center cursor-pointer">
+            <FaLocationDot className="px-3 py-3 rounded-full bg-[#F1EFF4] box-border w-1/4 h-1/4" />
+            <div className="flex flex-col ml-2 w-full">
+              <p className="text-sm font-semibold w-56">
+                Yetkazib berish yoki olib ketish
+              </p>
+              <h1 className="text-sm text-[#5164C0] font-semibold w-52">
+                Qabul qilib olish turini tanlang
+              </h1>
             </div>
           </div>
 
-          <DisclosurePanel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-                <DisclosureButton
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </DisclosureButton>
-              ))}
+          <div className="relative">
+            <button
+              id="dropdownButton"
+              className="flex items-center text-gray-700 focus:outline-none border bg-[#F1EFF4] rounded-full px-3 py-2"
+              onClick={handleDropdownClick}
+            >
+              <span id="selectedLanguage" className="mr-2 ">
+                <img src={selectedLanguage} alt="Language" />
+              </span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              id="dropdownMenu"
+              className="absolute right-0 mt-4 w-44 bg-white border border-gray-200 shadow-lg rounded hidden"
+            >
+              <a
+                href="#"
+                className="flex gap-4 px-4 py-2 items-center text-gray-700 hover:bg-gray-100"
+                onClick={handleLanguageChange("UZ", uz)}
+              >
+                <img src={uz} alt="UZ" />
+                O'zbekcha
+                <MdCheck />
+              </a>
+              <a
+                href="#"
+                className="flex gap-4 px-4 py-2 text-gray-700 hover:bg-gray-100"
+                onClick={handleLanguageChange("RU", ru)}
+              >
+                <img src={ru} alt="RU" />
+                Ruscha
+              </a>
+              <a
+                href="#"
+                className="flex gap-4 px-4 py-2 text-gray-700 hover:bg-gray-100"
+                onClick={handleLanguageChange("EN", en)}
+              >
+                <img src={en} alt="EN" />
+                English
+              </a>
             </div>
-          </DisclosurePanel>
-        </>
-      )}
-    </Disclosure>
-  )
+          </div>
+
+          <div className="flex space-x-4">
+            <NavLink
+              to="/cart"
+              className="text-gray-700 flex items-center gap-4 hover:text-gray-900"
+            >
+              <ShoppingCartIcon className="rounded-full bg-[#F1EFF4] h-full" />
+              <h1>2 000 so'm</h1>
+            </NavLink>
+            <NavLink onClick={handleShowLogin}>
+              <PersonIcon className="rounded-full bg-[#F1EFF4] h-full" />
+            </NavLink>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
 }
