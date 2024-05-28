@@ -6,10 +6,12 @@ import About from './page/About/About'
 import Cart from './page/Cart/Cart'
 import Contact from './page/Contact/Contact'
 import Filial from './page/Filials/Filial'
+import Header from './components/Header/Header'
 
 const App = () => {
   return (
     <>
+      <Header />
     
     <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
       <Routes >
