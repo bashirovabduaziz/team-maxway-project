@@ -1,1 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.data-header::-webkit-scrollbar {
+    display: none;
+}
+
+.data-header {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.data-header {
+    overflow-x: auto;
+    white-space: nowrap;
+}
