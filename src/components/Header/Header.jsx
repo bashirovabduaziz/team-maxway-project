@@ -9,6 +9,7 @@ import { MdCheck } from "react-icons/md";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
 import "./header.css";
+import Carousel from "../Carousel";
 
 export default function Header({ setShowLogin }) {
   const [selectedLanguage, setSelectedLanguage] = useState(uz);
@@ -157,6 +158,12 @@ export default function Header({ setShowLogin }) {
           </div>
         </div>
       </nav>
+
+      <main>
+        <Carousel/>
+      </main>
     </div>
   );
 }
+
+
