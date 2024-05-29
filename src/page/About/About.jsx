@@ -3,7 +3,7 @@ import Img1  from "../../../public/assets/about/about.webp"
 const About = () => {
   return (
     <div className="mb-[30px]">
-      <div className="container mx-auto px-4 flex flex-col justify-center">
+      <div className="about__container mx-auto px-4 flex flex-col justify-center">
         <h1 className=' font-bold text-[35px] py-[25px]'>Kompaniya haqida</h1>
         <img src={Img1} alt="maxway img"  className="w-[80vw] h-[45vh] rounded-xl mb-[20px]"/>
         <div className="pt-[10px] w-[50vw] flex flex-col justify-center items-center">
