@@ -1,0 +1,203 @@
+[
+  {
+    "id": 1,
+    "name": "MAX WAY BERUNIY",
+    "address": "улица Беруни, 47, Ташкент",
+    "latitude": 41.344297,
+    "longitude": 69.202567,
+    "open": "23:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-23:00",
+    "phone": "+998901234567"
+  },
+   {
+    "id": 2,
+    "name": "MAX WAY ATLAS",
+    "address": "улица Катартал, 28, Ташкент",
+    "latitude": 41.281545,
+    "longitude": 69.203815,
+    "open": "10:00 gacha yopiq",
+    "hours": "Du-Yak: 10:00-22:00",
+    "phone": "+998901234567"
+  },
+   {
+    "id": 3,
+    "name": "MAX WAY - DRUJBA",
+    "address": "микрорайон Алмазар, 8/2, Чиланзарский район, Ташкент",
+    "latitude": 41.290680,
+    "longitude": 69.298604,
+    "open": "04:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-04:00",
+    "phone": "+998901234567"
+  },
+   {
+    "id": 4,
+    "name": "MAX WAY MEGA PLANET",
+    "address": "улица Ниязбек, 1",
+    "latitude": 41.365758,
+    "longitude": 69.294668,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 5,
+    "name": "MAX WAY AVIASOZLAR",
+    "address": "улица Авиасозлар, 23",
+    "latitude": 41.282538,
+    "longitude": 69.323409,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 6,
+    "name": "MAX WAY RISOVIY",
+    "address": "Узбекистан, Ташкент, Алтынкульская улица, 10",
+    "latitude": 41.274911,
+    "longitude": 69.309381,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 7,
+    "name": "MAX WAY PARUS",
+    "address": "улица Катартал, 60/5",
+    "latitude": 41.293531,
+    "longitude": 69.210372,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 8,
+    "name": "MAX WAY MAGIC CITY",
+    "address": "Узбекистан, Ташкент, улица Бабура, 174/6",
+    "latitude": 41.303789,
+    "longitude": 69.246372,
+    "open": "10:00 gacha yopiq",
+    "hours": "Du-Yak: 10:00-22:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 9,
+    "name": "MAX WAY SAMARQAND DARVOZA",
+    "address": "Узбекистан, Ташкент, улица Коратош, 5А",
+    "latitude": 41.303789,
+    "longitude": 69.256239,
+    "open": "10:00 gacha yopiq",
+    "hours": "Du-Yak: 10:00-22:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 10,
+    "name": "MAX WAY PARKENT",
+    "address": "Узбекистан, Ташкент, Яшнободский район, массив Мавлоно Риёзи, 30В",
+    "latitude": 41.318809,
+    "longitude": 69.321408,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 11,
+    "name": "MAX WAY UNIVERSAM",
+    "address": "Узбекистан, Ташкент, проспект Амира Темура, 41/3",
+    "latitude": 41.342266,
+    "longitude": 69.284521,
+    "open": "23:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-23:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 12,
+    "name": "MAX WAY ROYSON",
+    "address": "Узбекистан, Ташкент, улица Заркайнар, 2",
+    "latitude": 41.321167,
+    "longitude": 69.242314,
+    "open": "01:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 13,
+    "name": "MAX WAY NEXT",
+    "address": "Узбекистан, Ташкент, улица Бабура, 6",
+    "latitude": 41.297942,
+    "longitude": 69.249418,
+    "open": "22:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-22:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 14,
+    "name": "MAX WAY MUQUMIY",
+    "address": "Узбекистан, Ташкент, улица Чиланзар",
+    "latitude": 41.298779,
+    "longitude": 69.262738,
+    "open": "04:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-04:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 15,
+    "name": "MAX WAY GRAND MIR",
+    "address": "Узбекистан, Ташкент, улица Шота Руставели, 9А",
+    "latitude": 41.295049,
+    "longitude": 69.268032,
+    "open": "04:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-04:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 16,
+    "name": "MAX WAY SAYRAM",
+    "address": "Узбекистан, Ташкент, улица Юнусота",
+    "latitude": 41.371628,
+    "longitude": 69.311122,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 17,
+    "name": "MAX WAY MAKSIM GORKIY",
+    "address": "махалля Элобод",
+    "latitude": 41.324823,
+    "longitude": 69.313895,
+    "open": "01:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-01:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 18,
+    "name": "MAX WAY SERGELI",
+    "address": "Узбекистан, Ташкент, Сергелийский район, массив Сергели-VIIIА, 11",
+    "latitude": 41.226288,
+    "longitude": 69.217785,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 19,
+    "name": "MAX WAY FONTAN",
+    "address": "проспект Амира Темура",
+    "latitude": 41.365758,
+    "longitude": 69.294668,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  },
+  {
+    "id": 20,
+    "name": "MAX WAY MINOR",
+    "address": "MaxWay",
+    "latitude": 39.627012,
+    "longitude": 66.974973,
+    "open": "03:00 gacha ochiq",
+    "hours": "Du-Yak: 10:00-03:00",
+    "phone": "+998901234567"
+  }
+ 
+]
