@@ -3,13 +3,13 @@ import { LONGER } from "../../data/APIData";
 
 const MaxiBox = () => {
   const [maxi, setMaxi] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setMaxi(LONGER);
-      setLoading(false);
-    }, 500);
+      // setLoading(false);
+    }, 100);
   }, []);
 
   // if (loading) {
