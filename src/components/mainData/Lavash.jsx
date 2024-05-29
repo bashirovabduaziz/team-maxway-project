@@ -12,9 +12,6 @@ const Lavash = () => {
     }, 500);
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="pb-12">

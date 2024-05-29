@@ -17,3 +17,11 @@ body {
     overflow-x: auto;
     white-space: nowrap;
 }
+.section {
+    padding-top: 100px;
+    margin-top: -80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}

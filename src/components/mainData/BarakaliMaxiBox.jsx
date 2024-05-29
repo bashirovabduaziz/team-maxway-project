@@ -12,10 +12,6 @@ const BarakaliMaxiBox = () => {
     }, 500);
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="pb-12">
       <h1 className="mb-5 text-[28px] font-semibold leading-none">

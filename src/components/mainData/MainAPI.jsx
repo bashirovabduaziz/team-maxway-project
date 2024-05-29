@@ -9,138 +9,59 @@ import Shaurma from "./Shaurma";
 import Burger from "./Burger";
 import DonarKebab from "./DonarKebab";
 import HotDog from "./HotDog";
-import Gazak from "./Gazaklar";
+import Gazaklar from "./Gazaklar";
 import Tamaddilar from "./Tamaddilar";
 import Desertlar from "./Desertlar";
 import Ichimliklar from "./Ichimliklar";
 import Souslar from "./Souslar";
-import { Anchor } from "antd";
 
 const MainAPI = () => {
   return (
     <div>
-      <div
-        style={{
-          padding: "20px",
-        }}
-      >
-        <Anchor
-          direction="horizontal"
-          items={[
-            {
-              key: "part-1",
-              href: "#part-1",
-              title: "Longer1+1=3 Aksiyasi",
-            },
-            {
-              key: "part-2",
-              href: "#part-2",
-              title: "Yangilik 📣",
-            },
-            {
-              key: "part-3",
-              href: "#part-3",
-              title: "BARAKALI Maxi BOX",
-            },
-            {
-              key: "part-4",
-              href: "#part-4",
-              title: "🥪Klab-Sendvich",
-            },
-            {
-              key: "part-5",
-              href: "#part-5",
-              title: "🌯Lavash",
-            },
-            {
-              key: "part-6",
-              href: "#part-6",
-              title: "🌮Shaurma",
-            },
-            {
-              key: "part-7",
-              href: "#part-7",
-              title: "🍔Burger",
-            },
-            {
-              key: "part-8",
-              href: "#part-8",
-              title: "🍱Donar Kebab",
-            },
-            {
-              key: "part-9",
-              href: "#part-9",
-              title: "🌭Hot-Dog",
-            },
-            {
-              key: "part-10",
-              href: "#part-10",
-              title: "🍟Gazaklar",
-            },
-            {
-              key: "part-11",
-              href: "#part-11",
-              title: "🍚Tamaddilar",
-            },
-            {
-              key: "part-12",
-              href: "#part-12",
-              title: "🍰Desertlar",
-            },
-            {
-              key: "part-13",
-              href: "#part-13",
-              title: "🥤Ichimliklar",
-            },
-            {
-              key: "part-14",
-              href: "#part-14",
-              title: "🥫Souslar",
-            },
-          ]}
-        />
+      <div className="sticky top-0 z-30 h-20 bg-white shadow-md">
+        <DataHeader />
       </div>
-      <div>
-        <div id="part-1">
+      <div className="mx-auto mt-5 max-w-[1248px]">
+        <div id="part-1" className="section">
           <MaxiBox />
         </div>
-        <div id="part-2">
+        <div id="part-2" className="section">
           <Yangilik />
         </div>
-        <div id="part-3">
+        <div id="part-3" className="section">
           <BarakaliMaxiBox />
         </div>
-        <div id="part-4">
+        <div id="part-4" className="section">
           <KlabSandwich />
         </div>
-        <div id="part-5">
+        <div id="part-5" className="section">
           <Lavash />
         </div>
-        <div id="part-6">
+        <div id="part-6" className="section">
           <Shaurma />
         </div>
-        <div id="part-7">
+        <div id="part-7" className="section">
           <Burger />
         </div>
-        <div id="part-8">
+        <div id="part-8" className="section">
           <DonarKebab />
         </div>
-        <div id="part-9">
+        <div id="part-9" className="section">
           <HotDog />
         </div>
-        <div id="part-10">
-          <Gazak />
+        <div id="part-10" className="section">
+          <Gazaklar />
         </div>
-        <div id="part-11">
+        <div id="part-11" className="section">
           <Tamaddilar />
         </div>
-        <div id="part-12">
+        <div id="part-12" className="section">
           <Desertlar />
         </div>
-        <div id="part-13">
+        <div id="part-13" className="section">
           <Ichimliklar />
         </div>
-        <div id="part-14">
+        <div id="part-14" className="section">
           <Souslar />
         </div>
       </div>
