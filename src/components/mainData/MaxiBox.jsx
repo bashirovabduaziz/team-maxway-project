@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { LONGER } from "../../data/APIData";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
 
 const MaxiBox = () => {
   const [maxi, setMaxi] = useState([]);
+  const [quantity, setQuantity] = useState(0);
+
   // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,9 +46,34 @@ const MaxiBox = () => {
                   so'm
                 </span>
               </p>
-              <button className="rounded-full bg-[#51267D] px-6 py-[10px] text-[14px] text-white hover:bg-[#593085]">
-                Qo'shish
-              </button>
+              {quantity === 0 ? (
+                <button
+                  onClick={() => {
+                    setQuantity(1);
+                  }}
+                  className="rounded-full bg-[#51267D] px-6 py-[10px] text-[14px] text-white hover:bg-[#593085]"
+                >
+                  Qo'shish
+                </button>
+              ) : (
+                <div className="flex h-[40px] w-[107px] items-center justify-around rounded-full border border-[#51267D]">
+                  <button
+                    onClick={() => {
+                      setQuantity((quantity) => quantity - 1);
+                    }}
+                  >
+                    <RemoveIcon />
+                  </button>
+                  <span className="text-lg font-medium">{quantity}</span>
+                  <button
+                    onClick={() => {
+                      setQuantity((prev) => prev + 1);
+                    }}
+                  >
+                    <AddIcon />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
