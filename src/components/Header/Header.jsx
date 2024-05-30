@@ -47,28 +47,50 @@ export default function Header({ setShowLogin }) {
 
   return (
     <div>
-      <nav className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between py-2">
+      <nav className="mx-auto z-10 max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between py-2">
         <div className="left__nav flex items-center gap-12">
           <NavLink to="/">
             <img src={logo} alt="Logo" />
           </NavLink>
 
           <ul className="flex space-x-8">
-            <NavLink to="/" className="text-gray-700 hover:text-gray-900">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-gray-900 font-bold"
+                  : "text-gray-700 hover:text-gray-900"
+              }
+            >
               Menyu
             </NavLink>
             <NavLink
               to="/branches"
-              className="text-gray-700 hover:text-gray-900"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-gray-900 font-bold"
+                  : "text-gray-700 hover:text-gray-900"
+              }
             >
               Filiallar
             </NavLink>
-            <NavLink to="/about" className="text-gray-700 hover:text-gray-900">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-gray-900 font-bold"
+                  : "text-gray-700 hover:text-gray-900"
+              }
+            >
               Biz haqimizda
             </NavLink>
             <NavLink
               to="/contact"
-              className="text-gray-700 hover:text-gray-900"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-gray-900 font-bold"
+                  : "text-gray-700 hover:text-gray-900"
+              }
             >
               Bog'lanish
             </NavLink>
@@ -88,7 +110,7 @@ export default function Header({ setShowLogin }) {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative z-10">
             <button
               id="dropdownButton"
               className="flex items-center text-gray-700 focus:outline-none border bg-[#F1EFF4] rounded-full px-3 py-2"
@@ -160,10 +182,8 @@ export default function Header({ setShowLogin }) {
       </nav>
 
       <main>
-        <Carousel/>
+        <Carousel />
       </main>
     </div>
   );
 }
-
-
