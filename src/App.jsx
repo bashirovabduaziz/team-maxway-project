@@ -10,18 +10,17 @@ import Filial from './page/Filials/Filial'
 const App = () => {
   return (
     <>
-    
-    <div >
-      <Routes >
-        <Route path='/' element={<Home />}/>
-        <Route path='/about' element={<About />}/>
-        <Route path='/cart' element={<Cart />}/>
-        <Route path='/contact' element={<Contact />}/>
-        <Route path='/filial' element={<Filial />}/>
-      </Routes>
-    </div>
+      <div>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Filial />} />
+        </Routes>
+      </div>
     </>
-  )
+  );
 }
 
 export default App
